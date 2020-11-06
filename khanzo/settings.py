@@ -26,7 +26,7 @@ SECRET_KEY = '4ep0rz909me!fx((ro5&w84k$gxw9br=0cn%p^3dh+(2-d%by2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','khanzo.herokuapp.com']
+ALLOWED_HOSTS = ['khanzo.herokuapp.com']
 
 
 # Application definition
