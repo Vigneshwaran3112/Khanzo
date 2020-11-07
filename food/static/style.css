@@ -33,7 +33,7 @@
 }
 
 
-@media screen and (min-width: 200px) and (max-width: 1900px){
+@media screen and (min-width: 720px) and (max-width: 1080px){
 	
 	.bannerimg{
 		height: 200px;
