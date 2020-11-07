@@ -1,0 +1,101 @@
+.gridview{
+	display: flex;
+	height: 160px;
+	overflow-x: auto;
+}
+
+.gridview::-webkit-scrollbar{
+	width: 0;
+}
+
+.gridview .item{
+	min-width: 90px;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	background-color: #fff;
+	margin-right: 30px;
+}
+
+.name{
+	margin-top: -20px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.locationtag{
+	text-decoration: none;
+	color: black;
+}
+.locationtag:hover{
+	text-decoration: none;
+	color: black;
+}
+
+
+@media only screen and (min-width: 200px) and (max-width: 800px){
+	
+	.bannerimg{
+		height: 200px;
+	}
+	.footerindex{
+		margin-top: 100%;
+	}
+
+	.maddress{
+		font-size: 13px;
+	}
+	.mfeedtopic{
+		font-size: 25px;
+	}
+	.mfeedpara{
+		font-size: 12px;
+	}
+	.feedform{
+		height: 200px;
+	}
+	.feedinput{
+		margin-top: -20px;
+		font-size: 12px;
+	}
+	.Feedback{
+		margin-top: 5%;
+		padding-left: 2px; 
+	}
+
+	.storecard{
+		grid-template-columns: repeat(2, 1fr);
+		//grid-gap: 10%;
+		margin: 6%;
+	}
+	.storeimg{
+		width: 170px;
+		height: 170px;
+	}
+	.storefont{
+		font-size: 12px;
+	}
+	.storetitle{
+		font-size: 16px;
+	}
+	.storesubcard{
+		width: 170px
+	}
+
+
+	.servicecard{
+		grid-template-columns: repeat(2, 1fr);
+		//grid-gap: 10%;
+		margin: 6%;
+	}
+	.servicefont{
+		font-size: 12px;
+	}
+	.serviceimg{
+		width: 170px;
+		height: 170px;
+	}
+	.servicesubcard{
+		width: 170px;
+	}
+}

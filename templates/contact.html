@@ -7,17 +7,15 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css '%}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
         .Feedback{
             margin-top: -5%;
+            padding: 55px;
         }
         .active{
             border-radius: 5px 20px 5px 20px;
-        }
-        #map { 
-            height: 680px; 
-            width: 100%; 
         }
         .navbar-brand{
             font-size: 25px;
@@ -33,7 +31,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav" style="float: right;">
+    <div class="navbar-nav">
       <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="/store/">Khanzo Store</a>
       <a class="nav-item nav-link" href="/services/">Services</a>
@@ -43,17 +41,17 @@
   </div>
     </nav><br><br>
 
-    <div class="container-fluid bg-success p-5 Feedback">
+    <div class="container-fluid bg-success Feedback">
         <div class="row">
             <div class=col-5>
                 <br><br><br><br><br><br>
                 <div class="row">
                     <div class="col-1">
-                        <span class="material-icons">room</span>
+                        <span class="material-icons" class="maddress">room</span>
                     </div>
                     <div class="col-11">
-                        <h5>No.1B, Karnavoor Pattai,</h5>
-                        <h5>Tindivanam</h5>
+                        <h5 class="maddress">No.1B, Karnavoor Pattai,</h5>
+                        <h5 class="maddress">Tindivanam</h5>
                     </div>
                 </div><br>
 
@@ -62,30 +60,31 @@
                         <span class="material-icons">call</span>
                     </div>
                     <div class="col-11">
-                        <h5>+91 8870697143</h5>
+                        <h5 class="maddress">+91 8870697143</h5>
+                        <a href="tel:+918870697143"><button class="btn btn-danger">HelpLine</button></a>
                     </div>
                 </div>
                 
             </div>
 
             <div class=col-7>
-                <center><h2>Feedback</h2><br>
-                <b>Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</b>
+                <center><h2 class="mfeedtopic">Feedback</h2><br>
+                <b class="mfeedpara">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</b>
                 </center><br><br>
 
             <form action="/contact/" method="POST">
                  {% csrf_token %}
-            <div class="row">
+            <div class="row feedform">
                 <div class="container-fluid row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                        <input id="form_name" type="text" name="name" class="form-control feedinput" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                        <input id="form_email" type="email" name="email" class="form-control feedinput" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
@@ -93,12 +92,12 @@
                 <div class="container-fluid row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                            <textarea id="form_message" name="message" class="form-control feedinput" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <input type="submit" class="btn btn-danger btn-send" value="Send message">
+                        <input type="submit" class="btn btn-danger btn-send feedinput" value="Send message">
                     </div>
                 </div>
             </div>
@@ -108,26 +107,23 @@
 </div>
 
 <div container-fluid>
-    <div id="map"></div> 
-    <script> 
-      function initMap() { 
-        var uluru = {lat: 12.2267, lng: 79.6504}; 
-        var map = new google.maps.Map(document.getElementById('map'), { 
-          zoom: 4, 
-          center: uluru 
-        }); 
-        var marker = new google.maps.Marker({ 
-          position: uluru, 
-          map: map 
-        }); 
-      } 
-    </script> 
-    <script async defer 
-    src= 
-"https://maps.googleapis.com/maps/api/js?key= 
-AIzaSyB2bXKNDezDf6YNVc-SauobynNHPo4RJb8&callback=initMap"> 
-    </script>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62387.57644333219!2d79.6214380785267!3d12.23313886761769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5340acd879b95b%3A0x5992d3fd3f53384b!2sTindivanam%2C%20Tamil%20Nadu%20604001!5e0!3m2!1sen!2sin!4v1604766925928!5m2!1sen!2sin" width="100%" height="690" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </div>
+	
+	<footer class="container-fluid footer bg-success" style="margin-top: 20%;">
+        <center><table>
+            <tr>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td><b>&copy copyright from Khanzo.com</b></td>
+            </tr>
+            <tr align="center">
+                <td>All rights reserved</td>
+            </tr>
+        </table></center>
+    </footer>
+	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '4ep0rz909me!fx((ro5&w84k$gxw9br=0cn%p^3dh+(2-d%by2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['khanzo.herokuapp.com']
+# 'khanzo.herokuapp.com'
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -121,8 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static", 'food/static/',]
-STATIC_ROOT = [os.path.join(BASE_DIR, 'food/static')]
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -26,7 +26,4 @@ urlpatterns = [
     path('services/', views.services),
     path('contact/', views.contact),
     path('about/', views.about),
-
-
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]

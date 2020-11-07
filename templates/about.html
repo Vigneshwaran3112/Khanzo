@@ -20,11 +20,15 @@
         .navbar-brand{
             font-size: 25px;
         }
+	.n{
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10%;
+        }
     </style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand text-success" href="#">
+		<a class="navbar-brand text-success" href="/">
 			<img src="{% static '/images/logo.jfif' %}" width="30" height="30" class="d-inline-block align-top" alt="">
             <b>Khanzo</b>
         </a>
@@ -32,7 +36,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav" style="float: right;">
+    <div class="navbar-nav">
       <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="/store/">Khanzo Store</a>
       <a class="nav-item nav-link" href="/services/">Services</a>
@@ -43,7 +47,7 @@
     </nav><br><br>
 
     <div class="container">
-        <div class="row justify-content-around">
+        <div class="row  n">
 
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
@@ -71,7 +75,21 @@
             
         </div>
     </div>
-
+	
+	<footer class="container-fluid footer bg-success" style="margin-top: 20%;">
+        <center><table>
+            <tr>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td><b>&copy copyright from Khanzo.com</b></td>
+            </tr>
+            <tr align="center">
+                <td>All rights reserved</td>
+            </tr>
+        </table></center>
+    </footer>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
