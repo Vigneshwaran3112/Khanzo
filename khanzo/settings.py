@@ -27,7 +27,7 @@ SECRET_KEY = '4ep0rz909me!fx((ro5&w84k$gxw9br=0cn%p^3dh+(2-d%by2'
 DEBUG = True
 
 # 'khanzo.herokuapp.com'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['khanzo.herokuapp.com']
 
 
 # Application definition
