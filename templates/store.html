@@ -31,13 +31,6 @@
         .storesubcard{
             width: 300px; 
         }
-	#filterDiv{
-	display: none;
-	}
-	.show{
-        display: block;
-	}
-	    
     </style>
 </head>
 <body>
@@ -65,27 +58,27 @@
             <a href="" class="locationtag"><div class="rounded-circle bg-danger"><b>Near by</b></div></a>
         </div>
         <div class="item">
-            <a href="" class="locationtag" onclick="filterSelection('tindivanam')"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Tindivanam</p></a>
         </div>
         <div class="item">
-            <a href="" class="locationtag" onclick="filterSelection('puducherry')"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Puducherry</p></a>
         </div>
         <div class="item">
-            <a href="" class="locationtag" onclick="filterSelection('villupuram')"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Villupuram</p></a>
         </div>
         <div class="item">
-            <a href="" class="locationtag" onclick="filterSelection('gingee')"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Gingee</p></a>
         </div>
         <div class="item">
-            <a href="" class="locationtag" onclick="filterSelection('vandavasi')"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Vandavasi</p></a>
         </div>
         <div class="item">
-            <a href="" class="locationtag" onclick="filterSelection('chennai')"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Chennai</p></a>
         </div>
     </div>
@@ -102,7 +95,7 @@
     <div class="container">
         <div class="row storecard">
 
-            <div class="filterDiv tindivanam card storesubcard">
+            <div class="card storesubcard">
                 <img class="card-img-top storeimg" src="{% static 'images/images1.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -112,7 +105,7 @@
                 </div>
             </div>
 
-            <div class="filterDiv tindivanam card storesubcard">
+            <div class="card storesubcard">
                 <img class="card-img-top storeimg" src="{% static 'images/images2.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -122,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="filterDiv tindivanam card storesubcard">
+            <div class="card storesubcard">
                 <img class="card-img-top storeimg" src="{% static 'images/images3.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -132,7 +125,7 @@
                 </div>
             </div>
 
-            <div class="filterDiv villupuram card storesubcard">
+            <div class="card storesubcard">
                 <img class="card-img-top storeimg" src="{% static 'images/images3.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -142,7 +135,7 @@
                 </div>
             </div>
 
-            <div class="filterDiv puducherry card storesubcard">
+            <div class="card storesubcard">
                 <img class="card-img-top storeimg" src="{% static 'images/images1.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -152,7 +145,7 @@
                 </div>
             </div>
 
-            <div class="filterDiv chennaicard storesubcard">
+            <div class="card storesubcard">
                 <img class="card-img-top storeimg" src="{% static 'images/images2.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -165,50 +158,6 @@
         </div>
     </div>
 	
-	<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
 	
 	<footer class="container-fluid footer bg-success" style="margin-top: 20%;">
         <center><table>
