@@ -43,13 +43,14 @@
 	}
 
 	.maddress{
-		font-size: 13px;
+		font-size: 12px;
 	}
 	.mfeedtopic{
 		font-size: 25px;
 	}
 	.mfeedpara{
 		font-size: 12px;
+		line-height: 1;
 	}
 	.feedform{
 		height: 200px;
@@ -57,45 +58,54 @@
 	.feedinput{
 		margin-top: -20px;
 		font-size: 12px;
+		width: 100%;
+	}
+	.feedinputbtn{
+		margin-top: -20px;
+		font-size: 12px;
 	}
 	.Feedback{
-		margin-top: 5%;
-		padding-left: 2px; 
+		margin-top: -5%;
+		padding: -5px; 
 	}
+	.maddressicon{
+		font-size: 16px;
+	}
+
 
 	.storecard{
 		grid-template-columns: repeat(2, 1fr);
 		//grid-gap: 10%;
-		margin: 5%;
+		margin: 4%;
 	}
 	.storeimg{
-		width: 130px;
-		height: 130px;
+		max-width: 140px;
+		height: 140px;
 	}
 	.storefont{
 		font-size: 12px;
 	}
 	.storetitle{
-		font-size: 16px;
+		font-size: 15px;
 	}
 	.storesubcard{
-		width: 130px
+		max-width: 140px;
 	}
 
 
 	.servicecard{
 		grid-template-columns: repeat(2, 1fr);
 		//grid-gap: 10%;
-		margin: 5%;
+		margin: 4%;
 	}
 	.servicefont{
 		font-size: 12px;
 	}
 	.serviceimg{
-		width: 130px;
-		height: 130px;
+		max-width: 150px;
+		height: 150px;
 	}
 	.servicesubcard{
-		width: 130px;
+		max-width: 150px;
 	}
 }
