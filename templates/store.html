@@ -18,7 +18,7 @@
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
             margin-bottom:20px;
-            border-radius: 0 0 15px 15px;
+            border-radius: 15px;
         }
         .card:hover {
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -63,9 +63,6 @@
 
     <h5 align="center" class="text-success">Search by location</h5><br>
     <div class="gridview">
-        <div class="item" data-filter="all">
-            <button><div class="rounded-circle bg-success text-white"><b style="font-size: 20px;">All Stores</b></div></button>
-        </div>
         <div class="item" data-filter="Tindivanam">
             <button><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Tindivanam</p></button>
