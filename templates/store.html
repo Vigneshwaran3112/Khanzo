@@ -31,6 +31,11 @@
         .storesubcard{
             width: 300px; 
         }
+	button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
     </style>
 </head>
 <body>
@@ -55,31 +60,31 @@
     <h5 align="center" class="text-success">Search by location</h5><br>
     <div class="gridview" id="myBtnContainer">
         <div class="item">
-            <a href="" class="locationtag"><div class="rounded-circle bg-danger"><b>Near by</b></div></a>
+            <button href="" class="locationtag"><div class="rounded-circle bg-success text-white"><b>All Stores</b></div></button>
         </div>
         <div class="item">
-            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
-            <p class="name">Tindivanam</p></a>
+            <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <p class="name">Tindivanam</p></button>
         </div>
         <div class="item">
-            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
-            <p class="name">Puducherry</p></a>
+            <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <p class="name">Puducherry</p></button>
         </div>
         <div class="item">
-            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
-            <p class="name">Villupuram</p></a>
+            <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <p class="name">Villupuram</p></button>
         </div>
         <div class="item">
-            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
-            <p class="name">Gingee</p></a>
+            <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <p class="name">Gingee</p></button>
         </div>
         <div class="item">
-            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
-            <p class="name">Vandavasi</p></a>
+            <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <p class="name">Vandavasi</p></button>
         </div>
         <div class="item">
-            <a href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
-            <p class="name">Chennai</p></a>
+            <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
+            <p class="name">Chennai</p></button>
         </div>
     </div>
 
@@ -95,7 +100,7 @@
     <div class="container">
         <div class="row storecard">
 
-            <div class="card storesubcard">
+            <div class="card storesubcard filter Tindivanam">
                 <img class="card-img-top storeimg" src="{% static 'images/images1.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -105,28 +110,38 @@
                 </div>
             </div>
 
-            <div class="card storesubcard">
+            <div class="card storesubcard filter Puducherry">
                 <img class="card-img-top storeimg" src="{% static 'images/images2.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
-		    <h6 clsss="card-text storefont">Tindivanam</h6>                    
+		    <h6 clsss="card-text storefont">Puducherry</h6>                    
 		    <p class="card-text storefont">Some quick content.</p>
                     <a href="https://goo.gl/maps/5PhxmnELpoyU8zCh6" class="btn btn-primary storefont">view map</a>
                 </div>
             </div>
 
-            <div class="card storesubcard">
+            <div class="card storesubcard filter Villupuram">
+                <img class="card-img-top storeimg" src="{% static 'images/images3.jpeg' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title storetitle">Store name</h5>
+		    <h6 clsss="card-text storefont">Villupuram</h6>
+		    <p class="card-text storefont">Some quick content.</p>
+                    <a href="https://goo.gl/maps/5PhxmnELpoyU8zCh6" class="btn btn-primary storefont">view map</a>
+                </div>
+            </div>
+
+            <div class="card storesubcard filter Tindivanam">
                 <img class="card-img-top storeimg" src="{% static 'images/images3.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
 		    <h6 clsss="card-text storefont">Tindivanam</h6>
-		    <p class="card-text storefont">Some quick content.</p>
+                    <p class="card-text storefont">Some quick content.</p>
                     <a href="https://goo.gl/maps/5PhxmnELpoyU8zCh6" class="btn btn-primary storefont">view map</a>
                 </div>
             </div>
 
-            <div class="card storesubcard">
-                <img class="card-img-top storeimg" src="{% static 'images/images3.jpeg' %}" alt="Card image cap">
+            <div class="card storesubcard filter Villupuram">
+                <img class="card-img-top storeimg" src="{% static 'images/images1.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
 		    <h6 clsss="card-text storefont">Villupuram</h6>
@@ -135,21 +150,11 @@
                 </div>
             </div>
 
-            <div class="card storesubcard">
-                <img class="card-img-top storeimg" src="{% static 'images/images1.jpeg' %}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title storetitle">Store name</h5>
-		    <h6 clsss="card-text storefont">Puducherry</h6>
-                    <p class="card-text storefont">Some quick content.</p>
-                    <a href="https://goo.gl/maps/5PhxmnELpoyU8zCh6" class="btn btn-primary storefont">view map</a>
-                </div>
-            </div>
-
-            <div class="card storesubcard">
+            <div class="card storesubcard filter Tindivanam">
                 <img class="card-img-top storeimg" src="{% static 'images/images2.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
-		    <h6 clsss="card-text storefont">Chennai</h6>
+		    <h6 clsss="card-text storefont">Tindivanam</h6>
                     <p class="card-text storefont">Some quick content.</p>
                     <a href="https://goo.gl/maps/5PhxmnELpoyU8zCh6" class="btn btn-primary storefont">view map</a>
                 </div>
@@ -158,6 +163,22 @@
         </div>
     </div>
 	
+	<script>
+        $(document).ready(function(){
+            $(".item").click(function(){
+                var filterValue = $(this).attr('data-filter');
+                if(filterValue == "all")
+                {
+                    $(".filter").slow("slow");
+                }
+                else
+                {   
+                    $(".filter").not('.'+filterValue).hide("slow");
+                    $(".filter").filter('.'+filterValue).show("slow");
+                }
+            });
+        });
+    </script>
 	
 	<footer class="container-fluid footer bg-success" style="margin-top: 20%;">
         <center><table>
