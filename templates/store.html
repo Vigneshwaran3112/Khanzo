@@ -21,15 +21,16 @@
         .navbar-brand{
             font-size: 25px;
         }
-	    .storecard{
+	    <!--.storecard{
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 10%;
-        }
+        } -->
         .storeimg{
             width: 300px;
+	    height: 300px;
         }
-        .storesubcard{
-            width: 300px; 
+        .card{
+            width: 300px;
         }
 	button{
             background-color: transparent;
@@ -59,30 +60,30 @@
 
     <h5 align="center" class="text-success">Search by location</h5><br>
     <div class="gridview" id="myBtnContainer">
-        <div class="item">
-            <button href="" class="locationtag"><div class="rounded-circle bg-success text-white"><b>All Stores</b></div></button>
+        <div class="item" data-filter="all">
+            <button href="" class="locationtag"><div class="rounded-circle bg-success text-white"><b style="font-size: 13px;">All Stores</b></div></button>
         </div>
-        <div class="item">
+        <div class="item" data-filter="Tindivanam">
             <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Tindivanam</p></button>
         </div>
-        <div class="item">
+        <div class="item" data-filter="Puducherry">
             <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Puducherry</p></button>
         </div>
-        <div class="item">
+        <div class="item" data-filter="Villupuram">
             <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Villupuram</p></button>
         </div>
-        <div class="item">
+        <div class="item" data-filter="Gingee">
             <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Gingee</p></button>
         </div>
-        <div class="item">
+        <div class="item" data-filter="Vandavasi">
             <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Vandavasi</p></button>
         </div>
-        <div class="item">
+        <div class="item" data-filter="Chennai">
             <button href="" class="locationtag"><img class="rounded-circle" src="{% static 'images/images1.jpeg' %}" width="90px" height="90px">
             <p class="name">Chennai</p></button>
         </div>
@@ -100,7 +101,7 @@
     <div class="container">
         <div class="row storecard">
 
-            <div class="card storesubcard filter Tindivanam">
+            <div class="card filter Tindivanam">
                 <img class="card-img-top storeimg" src="{% static 'images/images1.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -110,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="card storesubcard filter Puducherry">
+            <div class="card filter Puducherry">
                 <img class="card-img-top storeimg" src="{% static 'images/images2.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -120,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="card storesubcard filter Villupuram">
+            <div class="card filter Villupuram">
                 <img class="card-img-top storeimg" src="{% static 'images/images3.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -130,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="card storesubcard filter Tindivanam">
+            <div class="card filter Tindivanam">
                 <img class="card-img-top storeimg" src="{% static 'images/images3.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -140,7 +141,7 @@
                 </div>
             </div>
 
-            <div class="card storesubcard filter Villupuram">
+            <div class="card filter Villupuram">
                 <img class="card-img-top storeimg" src="{% static 'images/images1.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
@@ -150,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="card storesubcard filter Tindivanam">
+            <div class="card filter Tindivanam">
                 <img class="card-img-top storeimg" src="{% static 'images/images2.jpeg' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title storetitle">Store name</h5>
