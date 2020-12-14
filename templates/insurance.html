@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+	<title>Buy Insurance</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css '%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+        .active{
+            border-radius: 5px 20px 5px 20px;
+          }
+        .navbar-brand{
+            font-size: 25px;
+            font-family: 'Audiowide', cursive;
+        }
+        .footerindex{
+            margin-top: 20%;
+        }
+        ul li a{
+          font-size: 20px;
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+
+        ul{
+          padding-top: 30px;
+          margin-left: 20%;
+        }
+        .motorform{
+
+        }
+        input[type="text"], textarea{
+          width: 50%;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid gray;
+          border-radius: 10px;
+        }
+
+        input[type="submit"]{
+          width: 50%;
+          outline: none;
+          border-radius: 20px;
+          border: 1px solid black;
+        }
+        @media screen and (min-width: 200px) and (max-width: 800px){
+          ul li a{
+            font-size: 13.3px;
+            margin-right: 0;
+            margin-left: 0;
+          }
+          ul{
+            margin-left: 0;
+            padding-top: 0;
+          }
+          input[type="text"], textarea, input[type="submit"]{
+            width: 90%;
+          }
+        }
+        
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand text-success" href="/">
+			<b>Khanzo</b>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/store/">Khanzo Store</a>
+      <a class="nav-item nav-link" href="/point/">Khanzo Point</a>
+      <a class="nav-item nav-link active bg-success text-white" href="/insurance/">Buy Insurance</a>
+      <a class="nav-item nav-link" href="/services/">Services</a>
+      <a class="nav-item nav-link" href="/contact/">Contact</a>
+      <a class="nav-item nav-link" href="/about/">About</a>
+    </div>
+  </div>
+    </nav>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-motor-tab" data-toggle="pill" href="#pills-motor" role="tab" aria-controls="pills-motor" aria-selected="true">Motor Insurance</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-health-tab" data-toggle="pill" href="#pills-health" role="tab" aria-controls="pills-health" aria-selected="false">Health Insurance</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-life-tab" data-toggle="pill" href="#pills-life" role="tab" aria-controls="pills-life" aria-selected="false">Life Insurance</a>
+  </li>
+</ul><br><br>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-motor" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div align="center" class="motorform">
+      <h4>Bike Insurance</h4><br><br>
+      <form action="" method="POST">
+        <input type="text" name="Insurer_name" placeholder="Insurer name"><br><br>
+        <textarea  name="address" placeholder="Insurer Address"></textarea><br><br>
+        <input type="text" name="vechicle_number" placeholder="Vechicle number"><br><br>
+        <input type="text" name="policy_number" placeholder="Policy number"><br><br>
+        <input type="text" name="engine_number" placeholder="Engine number"><br><br>
+        <input type="text" name="chassis_number" placeholder="Chassis number"><br><br>
+        <input type="text" name="vechicle_model" placeholder="Vechicle model"><br><br>
+        <input type="text" name="year" placeholder="year"><br><br>
+        <input type="text" name="cc" placeholder="cc"><br><br>
+        <input type="text" name="seat_capacity" placeholder="Seat Capacity"><br><br>
+        <input type="submit" value="Buy Insurance"><br><br>
+      </form>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="pills-health" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <h4>Health Insurance</h4>
+  </div>
+  <div class="tab-pane fade" id="pills-life" role="tabpanel" aria-labelledby="pills-contact-tab">
+    <h4>Life Insurance</h4>
+  </div>
+</div>
+
+</body>
+</html>

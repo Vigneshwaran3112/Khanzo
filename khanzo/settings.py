@@ -77,14 +77,24 @@ WSGI_APPLICATION = 'khanzo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+''' DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'khanzo_auth',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': '',
+        'PORT': '3306',
+    }
+} '''
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -128,5 +138,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'svigneshkrish007@gmail.com' 
-EMAIL_HOST_PASSWORD = 'svignesh'
+EMAIL_HOST_USER = 'khanzostore@gmail.com' 
+EMAIL_HOST_PASSWORD = '8300624251'
+
+
+'''
+EMAIL_HOST_USER = 'khanzostore@gmail.com' 
+EMAIL_HOST_PASSWORD = '8300624251'
+'''

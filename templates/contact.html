@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css '%}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
         .Feedback{
@@ -19,6 +23,7 @@
         }
         .navbar-brand{
             font-size: 25px;
+            font-family: 'Audiowide', cursive;
         }
     </style>
 </head>
@@ -34,40 +39,43 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="/store/">Khanzo Store</a>
+      <a class="nav-item nav-link" href="/point/">Khanzo Point</a>
+      <a class="nav-item nav-link" href="/insurance/">Buy Insurance</a>
       <a class="nav-item nav-link" href="/services/">Services</a>
       <a class="nav-item nav-link active bg-success text-white" href="/contact/">Contact</a>
       <a class="nav-item nav-link" href="/about/">About</a>
     </div>
   </div>
-    </nav><br><br>
+    </nav><br>
 
     <div class="container-fluid bg-success Feedback">
-        <div class="row">
-            <div class=col-5>
+        <div class="row feedrow">
+            <div class="col-5">
                 <br><br><br><br><br><br>
                 <div class="row">
                     <div class="col-1">
-                        <span class="material-icons" class="maddress">room</span>
+                        <span class="material-icons maddressicon">room</span>
                     </div>
                     <div class="col-11">
-                        <h5 class="maddress">No.1B, Karnavoor Pattai,</h5>
-                        <h5 class="maddress">Tindivanam</h5>
+                        <h5 class="maddress">No.18, Seshasalam Street,</h5>
+                        <h5 class="maddress">Gidangal - 1,</h5>
+                        <h5 class="maddress">Tindivanam - 604001</h5>
                     </div>
                 </div><br>
 
                 <div class="row">
                     <div class="col-1">
-                        <span class="material-icons">call</span>
+                        <span class="material-icons maddressicon">call</span>
                     </div>
                     <div class="col-11">
-                        <h5 class="maddress">+91 8870697143</h5>
-                        <a href="tel:+918870697143"><button class="btn btn-danger">HelpLine</button></a>
+                        <h5 class="maddress">+91 8300624251</h5>
+                        <a href="tel:+918300624251"><button class="btn btn-danger helpline">HelpLine</button></a>
                     </div>
                 </div>
                 
             </div>
 
-            <div class=col-7>
+            <div class="col-7">
                 <center><h2 class="mfeedtopic">Feedback</h2><br>
                 <b class="mfeedpara">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.</b>
                 </center><br><br>
@@ -78,7 +86,7 @@
                 <div class="container-fluid row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input id="form_name" type="text" name="name" class="form-control feedinput" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                        <input id="form_name" type="text" name="name" class="form-control feedinput" placeholder="Please enter your name *" required="required" data-error="Firstname is required.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
@@ -97,7 +105,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <input type="submit" class="btn btn-danger btn-send feedinput" value="Send message">
+                        <input type="submit" class="btn btn-danger btn-send feedinputbtn" value="Send message">
                     </div>
                 </div>
             </div>
@@ -107,7 +115,7 @@
 </div>
 
 <div container-fluid>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62387.57644333219!2d79.6214380785267!3d12.23313886761769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5340acd879b95b%3A0x5992d3fd3f53384b!2sTindivanam%2C%20Tamil%20Nadu%20604001!5e0!3m2!1sen!2sin!4v1604766925928!5m2!1sen!2sin" width="100%" height="690" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7798.5967873275!2d79.64646635304831!3d12.228063915169296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53474c50061c53%3A0x5c5fbb2a989ab801!2sSeshachalam%20St%2C%20Gidangal%201%2C%20Tindivanam%2C%20Tamil%20Nadu%20604001!5e0!3m2!1sen!2sin!4v1605421377524!5m2!1sen!2sin" width="100%" height="690" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </div>
 	
 	<footer class="container-fluid footer bg-success" style="margin-top: 20%;">
@@ -125,9 +133,7 @@
     </footer>
 	
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
 
 </body>
 </html>
