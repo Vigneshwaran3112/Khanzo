@@ -77,18 +77,6 @@ WSGI_APPLICATION = 'khanzo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-''' DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'khanzo_auth',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': '',
-        'PORT': '3306',
-    }
-} '''
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
