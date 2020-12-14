@@ -56,12 +56,16 @@
 
 @media screen and (min-width: 200px) and (max-width: 800px){
 
+<<<<<<< HEAD
 	.gridview{
 	display: flex;
 	height: 200px;
 	overflow-x: auto;
 	
 }
+=======
+@media screen and (min-width: 200px) and (max-width: 800px){
+>>>>>>> 1b6466f8cf2510a49ec28ad569363ca4af205f8f
 	
 	.bannerimg{
 		height: 200px;
@@ -72,10 +76,13 @@
 
 	.maddress{
 		font-size: 12px;
+<<<<<<< HEAD
 		margin-left: -30px;
 	}
 	.helpline{
 		margin-left: -30px;
+=======
+>>>>>>> 1b6466f8cf2510a49ec28ad569363ca4af205f8f
 	}
 	.mfeedtopic{
 		margin-top: -10px;
@@ -83,9 +90,14 @@
 		margin-left: -110px;
 	}
 	.mfeedpara{
+<<<<<<< HEAD
 		font-size: 11.5px;
 		/*line-height: 1;*/
 		content: 'Do you have any questions? Please contact us directly. Our team will come back to you within a matter of hours to help you.';
+=======
+		font-size: 12px;
+		line-height: 1;
+>>>>>>> 1b6466f8cf2510a49ec28ad569363ca4af205f8f
 	}
 	.feedform{
 		height: 200px;
@@ -93,7 +105,11 @@
 	.feedinput{
 		margin-top: -20px;
 		font-size: 12px;
+<<<<<<< HEAD
 		width: 150%;
+=======
+		width: 100%;
+>>>>>>> 1b6466f8cf2510a49ec28ad569363ca4af205f8f
 	}
 	.feedinputbtn{
 		margin-top: -20px;
@@ -104,8 +120,12 @@
 		padding: -5px; 
 	}
 	.maddressicon{
+<<<<<<< HEAD
 		font-size: 18px;
 		margin-left: -30px;
+=======
+		font-size: 16px;
+>>>>>>> 1b6466f8cf2510a49ec28ad569363ca4af205f8f
 	}
 
 
@@ -136,6 +156,7 @@
 		font-size: 12px;
 	}
 	.serviceimg{
+<<<<<<< HEAD
 		max-width: 116px;
 		height: 116px;
 	}
@@ -148,3 +169,12 @@
 	}*/
 
 }
+=======
+		max-width: 130px;
+		height: 130px;
+	}
+	.servicesubcard{
+		max-width: 130px;
+	}
+}
+>>>>>>> 1b6466f8cf2510a49ec28ad569363ca4af205f8f

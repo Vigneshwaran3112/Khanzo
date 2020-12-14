@@ -27,7 +27,7 @@ SECRET_KEY = '4ep0rz909me!fx((ro5&w84k$gxw9br=0cn%p^3dh+(2-d%by2'
 DEBUG = True
 
 # 'khanzo.herokuapp.com'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['khanzo.herokuapp.com']
 
 
 # Application definition
@@ -130,8 +130,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'food/static/'),
+)
+
+django_heroku.settings(locals())
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
